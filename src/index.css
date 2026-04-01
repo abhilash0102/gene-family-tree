@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 30 20% 98%;
+    --foreground: 220 15% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 15%;
+    --primary: 270 70% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 30 15% 93%;
+    --secondary-foreground: 220 15% 15%;
+    --muted: 30 10% 94%;
+    --muted-foreground: 220 10% 46%;
+    --accent: 270 70% 60%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 30 15% 90%;
+    --input: 30 15% 90%;
+    --ring: 270 70% 60%;
+    --radius: 0.5rem;
+
+    --canvas: 30 20% 98%;
+    --male-node: 200 95% 94%;
+    --male-border: 200 80% 85%;
+    --female-node: 340 95% 96%;
+    --female-border: 340 80% 90%;
+    --accent-purple: 270 70% 60%;
+    --connection-line: 220 10% 80%;
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 220 15% 15%;
+    --sidebar-primary: 270 70% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 30 15% 95%;
+    --sidebar-accent-foreground: 220 15% 15%;
+    --sidebar-border: 30 15% 90%;
+    --sidebar-ring: 270 70% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer utilities {
+  .shadow-node {
+    box-shadow: 0 0 0 1px rgba(0,0,0,.03), 0 2px 4px rgba(0,0,0,.05), 0 12px 24px -4px rgba(0,0,0,.08);
+  }
+  .shadow-node-hover {
+    box-shadow: 0 0 0 1px rgba(0,0,0,.04), 0 4px 8px rgba(0,0,0,.06), 0 20px 40px -8px rgba(0,0,0,.12);
+  }
+  .glow-selected {
+    box-shadow: 0 0 0 2px hsl(270 70% 60% / 0.3), 0 0 20px hsl(270 70% 60% / 0.2);
+  }
+  .shadow-panel {
+    box-shadow: -10px 0 30px -15px rgba(0,0,0,0.1);
+  }
+}
