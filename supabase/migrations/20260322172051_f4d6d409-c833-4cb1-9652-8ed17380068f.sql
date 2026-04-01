@@ -1,0 +1,1 @@
+ALTER TABLE public.node_positions DROP CONSTRAINT IF EXISTS node_positions_admin_id_person_id_key;
